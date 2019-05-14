@@ -1,0 +1,704 @@
+dxf2shp:
+  shp_archi:
+    defs:
+      -
+        name: COD_CLASSE
+        type: C
+        len: 6
+      -
+        name: FILE_ID
+        type: N
+        len: 19
+        dec: 0
+      -
+        name: RILIEVO
+        type: D
+      -
+        name: COM_ISTAT
+        type: C
+        len: 8
+      -
+        name: TP_STR_COD
+        type: C
+        len: 8
+      -
+        name: TP_STR_NOM
+        type: C
+        len: 254
+      -
+        name: ES_AMM_CF
+        type: C
+        len: 2
+      -
+        name: L_EG_COD
+        type: C
+        len: 16
+      -
+        name: L_EG_NOM
+        type: C
+        len: 50
+      -
+        name: L_BORN
+        type: D
+      -
+        name: L_DIA
+        type: N
+        len: 8
+        dec: 0
+      -
+        name: L_LUNG
+        type: N
+        len: 11
+        dec: 2
+        calc: lung
+      -
+        name: L_MAT
+        type: C
+        len: 4
+      -
+        name: L_STA
+        type: C
+        len: 2
+      -
+        name: L_PRO
+        type: C
+        len: 2
+      -
+        name: L_POS
+        type: C
+        len: 2
+      -
+        name: L_POS_SUP
+        type: C
+        len: 2
+      -
+        name: L_INFR_TY
+        type: C
+        len: 2
+      -
+        name: NODO_INI
+        type: N
+        len: 19
+        dec: 0
+      -
+        name: NODO_FIN
+        type: N
+        len: 19
+        dec: 0
+      -
+        name: L_F_TY
+        type: C
+        len: 2
+      -
+        name: L_F_TIPFOG
+        type: C
+        len: 2
+      -
+        name: L_F_TIPLIN
+        type: C
+        len: 2
+      -
+        name: L_F_FORSEZ
+        type: C
+        len: 2
+      -
+        name: L_F_LARG
+        type: N
+        len: 11
+        dec: 2
+      -
+        name: L_F_ALT
+        type: N
+        len: 11
+        dec: 2
+    name: C070201
+  shp_nodi:
+    name: C070202
+    defs:
+      -
+        name: COD_CLASSE
+        type: C
+        len: 6
+      -
+        name: FILE_ID
+        type: N
+        len: 19
+        dec: 0
+      -
+        name: RILIEVO
+        type: D
+      -
+        name: P_BORN
+        type: D
+      -
+        name: P_MAT
+        type: C
+        len: 4
+      -
+        name: P_STA
+        type: C
+        len: 2
+      -
+        name: P_QUO
+        type: N
+        len: 7
+        dec: 2
+      -
+        name: P_POS
+        type: C
+        len: 2
+      -
+        name: P_UTE
+        type: C
+        len: 2
+      -
+        name: P_F_TY
+        type: C
+        len: 4
+      -
+        name: P_F_REC
+        type: C
+        len: 2
+  dxf_archi:
+    layers:
+      - 20_RETE-FOGNATURA-NERA
+      - 20_RETE-FOGNATURA-BIANCA
+      - 20_RETE-FOGNATURA-MISTA
+      - 20_RETE-ALLACCIAMENTO
+      - 20_RETE-SCOLMATORE
+      - 20_RETE-METEORICHE-STRADALI
+      - 20_RETE-COLLETTORE-MISTA-SOVR
+      - '20_F-TRATTO FUORI SERVIZIO'
+      - 20_RETE-FOSSI
+    atts:
+      - OBJ_ID
+      - ISTAT_ID
+      - CODE
+      - IDPUNINI
+      - IDPUNFIN
+      - IDLININI
+      - MATLIN
+      - FORSEZ
+      - ALT_LIN
+      - LARG_LIN
+      - QUOINI
+      - QUOFIN
+      - DISLINI
+      - DISLFIN
+      - TIPFOG
+      - TIPLINIDR
+      - POS_TRATTA
+      - POS_SUP
+      - IMAGE
+      - DATA
+      - NOTE
+      - LUNG
+      - PENDENZA
+      - DEN_TRONC
+    element: LWPOLYLINE
+    mapping:
+      -
+        att: CODE
+        name: COD_CLASSE
+        type: C
+        len: 6
+      -
+        att: IMAGE
+        name: FILE_ID
+        type: N
+        len: 19
+        dec: 0
+      -
+        att: ""
+        name: RILIEVO
+        type: D
+      -
+        att: ISTAT_ID
+        name: COM_ISTAT
+        type: C
+        len: 8
+      -
+        att: ""
+        name: TP_STR_COD
+        type: C
+        len: 8
+      -
+        att: ""
+        name: TP_STR_NOM
+        type: C
+        len: 254
+      -
+        att: ""
+        name: ES_AMM_CF
+        type: C
+        len: 2
+      -
+        att: ""
+        name: L_EG_COD
+        type: C
+        len: 16
+      -
+        att: ""
+        name: L_EG_NOM
+        type: C
+        len: 50
+      -
+        att: ""
+        name: L_BORN
+        type: D
+      -
+        att: LARG_LIN
+        name: L_DIA
+        type: N
+        len: 8
+        dec: 0
+      -
+        att: LUNG
+        name: L_LUNG
+        type: N
+        len: 11
+        dec: 2
+        calc: lung
+      -
+        att: MATLIN
+        name: L_MAT
+        type: C
+        len: 4
+      -
+        att: ""
+        name: L_STA
+        type: C
+        len: 2
+      -
+        att: DISLINI
+        name: L_PRO
+        type: C
+        len: 2
+      -
+        att: POS_TRATTA
+        name: L_POS
+        type: C
+        len: 2
+      -
+        att: POS_SUP
+        name: L_POS_SUP
+        type: C
+        len: 2
+      -
+        att: ""
+        name: L_INFR_TY
+        type: C
+        len: 2
+      -
+        att: ""
+        name: NODO_INI
+        type: N
+        len: 19
+        dec: 0
+      -
+        att: ""
+        name: NODO_FIN
+        type: N
+        len: 19
+        dec: 0
+      -
+        att: ""
+        name: L_F_TY
+        type: C
+        len: 2
+      -
+        att: TIPFOG
+        name: L_F_TIPFOG
+        type: C
+        len: 2
+      -
+        att: TIPLINIDR
+        name: L_F_TIPLIN
+        type: C
+        len: 2
+      -
+        att: FORSEZ
+        name: L_F_FORSEZ
+        type: C
+        len: 2
+      -
+        att: LARG_LIN
+        name: L_F_LARG
+        type: N
+        len: 11
+        dec: 2
+      -
+        att: ALT_LIN
+        name: L_F_ALT
+        type: N
+        len: 11
+        dec: 2
+    block:
+      layers:
+        - 20_F-BLK-CONDOTTE
+      names:
+        - MASTER_S_L_CONDOTTA
+  dxf_nodi:
+    element: INSERT
+    atts:
+      - OBJ_ID
+      - ISTAT_ID
+      - QUOPUN
+      - CODE
+      - FORMA_CHIU
+      - MAT_CHIU
+      - LARG_CHIU
+      - LUNG_CHIU
+      - FORMA_SUP
+      - MAT_SUP
+      - LARG_SUP
+      - LUNG_SUP
+      - FORMA_INF
+      - LARG_INF
+      - LUNG_INF
+      - MAT_INF
+      - QUOINFPOZ
+      - COLPOZ
+      - TRAVASO
+      - COP_CHIU
+      - APP_CHIU
+      - MAT_COLPOZ
+      - SUPPOSA
+      - POS_NODO
+      - POS_SUP
+      - QUOTERR
+      - QUOTRAVASO
+      - IMAGE
+      - DISEGNI
+      - DATA
+      - NOTE
+      - DEN_PUN
+      - SPES_SUP
+    layers:
+      - 20_F-POZZETTI-VARI
+      - 20_F-CAMERETTA-SFIORATORE
+      - 20_F-CAMERETTE
+      - 20_F-DEPURATORE
+      - 20_F-DISOLEATORI
+      - 20_F-DN-CONDOTTE
+      - 20_F-NODO-CDN
+      - 20_F-NODO-INT
+      - 20_F-NODO-MATERIALE
+      - 20_F-POZZETTI-VARI
+      - 20_F-SCARICO
+    mapping:
+      -
+        att: CODE
+        name: COD_CLASSE
+        type: C
+        len: 6
+      -
+        att: OBJ_ID
+        name: FILE_ID
+        type: N
+        len: 19
+        dec: 0
+      -
+        att: ""
+        name: RILIEVO
+        type: D
+      -
+        att: ""
+        name: P_BORN
+        type: D
+      -
+        att: MAT_SUP
+        name: P_MAT
+        type: C
+        len: 4
+      -
+        att: ""
+        name: P_STA
+        type: C
+        len: 2
+      -
+        att: QUOTERR
+        name: P_QUO
+        type: N
+        len: 7
+        dec: 2
+      -
+        att: POS_NODO
+        name: P_POS
+        type: C
+        len: 2
+      -
+        att: ""
+        name: P_UTE
+        type: C
+        len: 2
+      -
+        att: ""
+        name: P_F_TY
+        type: C
+        len: 4
+      -
+        att: ""
+        name: P_F_REC
+        type: C
+        len: 2
+    block:
+      layers:
+        - 20_F-POZZETTI-VARI
+      names:
+        - PF
+etl:
+  tubi_defs:
+    -
+      name: COD_CLASSE
+      type: C
+      len: 6
+    -
+      name: FILE_ID
+      type: N
+      len: 19
+      dec: 0
+    -
+      name: RILIEVO
+      type: D
+    -
+      name: COM_ISTAT
+      type: C
+      len: 8
+    -
+      name: TP_STR_COD
+      type: C
+      len: 8
+    -
+      name: TP_STR_NOM
+      type: C
+      len: 254
+    -
+      name: ES_AMM_CF
+      type: C
+      len: 2
+    -
+      name: L_EG_COD
+      type: C
+      len: 16
+    -
+      name: L_EG_NOM
+      type: C
+      len: 50
+    -
+      name: L_BORN
+      type: D
+    -
+      name: L_DIA
+      type: N
+      len: 8
+      dec: 0
+    -
+      name: L_LUNG
+      type: N
+      len: 11
+      dec: 2
+      calc: lung
+    -
+      name: L_MAT
+      type: C
+      len: 4
+    -
+      name: L_STA
+      type: C
+      len: 2
+    -
+      name: L_PRO
+      type: C
+      len: 2
+    -
+      name: L_POS
+      type: C
+      len: 2
+    -
+      name: L_POS_SUP
+      type: C
+      len: 2
+    -
+      name: L_INFR_TY
+      type: C
+      len: 2
+    -
+      name: NODO_INI
+      type: N
+      len: 19
+      dec: 0
+    -
+      name: NODO_FIN
+      type: N
+      len: 19
+      dec: 0
+    -
+      name: L_F_TY
+      type: C
+      len: 2
+    -
+      name: L_F_TIPFOG
+      type: C
+      len: 2
+    -
+      name: L_F_TIPLIN
+      type: C
+      len: 2
+    -
+      name: L_F_FORSEZ
+      type: C
+      len: 2
+    -
+      name: L_F_LARG
+      type: N
+      len: 11
+      dec: 2
+    -
+      name: L_F_ALT
+      type: N
+      len: 11
+      dec: 2
+  pozzi_defs:
+    -
+      name: COD_CLASSE
+      type: C
+      len: 6
+    -
+      name: FILE_ID
+      type: N
+      len: 19
+      dec: 0
+    -
+      name: RILIEVO
+      type: D
+    -
+      name: P_BORN
+      type: D
+    -
+      name: P_MAT
+      type: C
+      len: 4
+    -
+      name: P_STA
+      type: C
+      len: 2
+    -
+      name: P_QUO
+      type: N
+      len: 7
+      dec: 2
+    -
+      name: P_POS
+      type: C
+      len: 2
+    -
+      name: P_UTE
+      type: C
+      len: 2
+    -
+      name: P_F_TY
+      type: C
+      len: 4
+    -
+      name: P_F_REC
+      type: C
+      len: 2
+  pozzi_atts:
+    - OBJ_ID
+    - ISTAT_ID
+    - QUOPUN
+    - CODE
+    - FORMA_CHIU
+    - MAT_CHIU
+    - LARG_CHIU
+    - LUNG_CHIU
+    - FORMA_SUP
+    - MAT_SUP
+    - LARG_SUP
+    - LUNG_SUP
+    - FORMA_INF
+    - LARG_INF
+    - LUNG_INF
+    - MAT_INF
+    - QUOINFPOZ
+    - COLPOZ
+    - TRAVASO
+    - COP_CHIU
+    - APP_CHIU
+    - MAT_COLPOZ
+    - SUPPOSA
+    - POS_NODO
+    - POS_SUP
+    - QUOTERR
+    - QUOTRAVASO
+    - IMAGE
+    - DISEGNI
+    - DATA
+    - NOTE
+    - DEN_PUN
+    - SPES_SUP
+  tubi_atts:
+    - OBJ_ID
+    - ISTAT_ID
+    - CODE
+    - IDPUNINI
+    - IDPUNFIN
+    - IDLININI
+    - MATLIN
+    - FORSEZ
+    - ALT_LIN
+    - LARG_LIN
+    - QUOINI
+    - QUOFIN
+    - DISLINI
+    - DISLFIN
+    - TIPFOG
+    - TIPLINIDR
+    - POS_TRATTA
+    - POS_SUP
+    - IMAGE
+    - DATA
+    - NOTE
+    - LUNG
+    - PENDENZA
+    - DEN_TRONC
+    - SEQ
+    - ENTRA
+    - ESCE
+    - DAPOZZO
+    - VERSOPOZZO
+  condotte_atts:
+    - OBJ_ID
+    - ISTAT_ID
+    - CODE
+    - IDPUNINI
+    - IDPUNFIN
+    - IDLININI
+    - MATLIN
+    - FORSEZ
+    - ALT_LIN
+    - LARG_LIN
+    - QUOINI
+    - QUOFIN
+    - DISLINI
+    - DISLFIN
+    - TIPFOG
+    - TIPLINIDR
+    - POS_TRATTA
+    - POS_SUP
+    - IMAGE
+    - DATA
+    - NOTE
+    - LUNG
+    - PENDENZA
+    - DEN_TRONC
+  dxf_layers_reti:
+    - 20_RETE-FOGNATURA-NERA
+    - 20_RETE-FOGNATURA-BIANCA
+    - 20_RETE-FOGNATURA-MISTA
+    - 20_RETE-ALLACCIAMENTO
+    - 20_RETE-SCOLMATORE
+    - 20_RETE-METEORICHE-STRADALI
+    - 20_RETE-COLLETTORE-MISTA-SOVR
+    - 20_RETE-FOSSI
