@@ -1,2 +1,2 @@
-Conversine di file mdb del rilievo Uni in disegni dxf 
+Conversione di file mdb del rilievo Uni in disegni dxf 
 sinossi
